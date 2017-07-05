@@ -1,4 +1,4 @@
-package com.itcast.bean;
+package com.baoxina.bean;
 
 public class PropertyDemo2 {
 

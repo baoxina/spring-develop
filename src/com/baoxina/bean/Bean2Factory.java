@@ -1,4 +1,4 @@
-package com.itcast.bean;
+package com.baoxina.bean;
 
 public class Bean2Factory {
 	public static Bean2 getBean2(){

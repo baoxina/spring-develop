@@ -1,4 +1,4 @@
-package com.itcast.bean;
+package com.baoxina.bean;
 
 import java.util.List;
 import java.util.Map;

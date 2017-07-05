@@ -1,4 +1,4 @@
-package com.itcast.bean;
+package com.baoxina.bean;
 
 public class UserService {
 	//1.定义dao类型属性

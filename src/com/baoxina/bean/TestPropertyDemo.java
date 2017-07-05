@@ -1,4 +1,4 @@
-package com.itcast.bean;
+package com.baoxina.bean;
 
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;

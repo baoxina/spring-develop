@@ -1,4 +1,4 @@
-package com.itcast;
+package com.baoxina;
 
 public class User {
 
