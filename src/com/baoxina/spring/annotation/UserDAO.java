@@ -3,8 +3,9 @@ package com.baoxina.spring.annotation;
 import org.springframework.stereotype.Repository;
 
 @Repository("userDAO")
-public class UserDAO {
+public class UserDAO implements BaseDAO{
+	@Override
 	public void add(){
-		System.out.println("userDAO....");
+		System.out.println("userDAO add....");
 	}
 }

@@ -18,11 +18,11 @@ public class UserService {
 		@Qualifier ("baseDao")
 	 */
 	@Autowired
-	//@Qualifier("userDAO")
-	private UserDAO userDAO;
+	@Qualifier("studentDAO")
+	private BaseDAO baseDao;
 	//使用注解方式的时候不需要Setter方法
 	public void add(){
 		System.out.println("service.....");
-		userDAO.add();
+		baseDao.add();
 	}
 }
