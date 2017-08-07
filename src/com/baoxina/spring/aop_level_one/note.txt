@@ -52,5 +52,13 @@ AOP操作术语
 	Introduction(引介):引介是一种特殊的通知，在不修改类代码的前提下，Introduction可以在运行qi为类动态地添加一些方法或属性
 	Target(目标对象):代理的目标对象，即要增强的类称为目标对象
 	Weaving(织入)：是把增强应用到目标的过程，即把advice应用到target的过程
-	Proxy(代理)：一个类被AOP织入增强后，就产生了一个结果代理类，这个代理类就称为Proxy	
+	Proxy(代理)：一个类被AOP织入增强后，就产生了一个结果代理类，这个代理类就称为Proxy
+	
+	使用表达式配置切入点
+	常用表达式
+	execution(<访问修饰符> <返回类型><方法名>(<参数>)<异常>)
+		1.execution(* com.baoxina.spring.aop_level_one.Book.add(..)) 对Book类中的add方法进行增强
+		2.execution(* com.baoxina.spring.aop_level_one.Book.*(..)) 对Book类中的所有方法进行增强
+		3.execution(* *.*(..)) //对所有类的所有方法进行增强	
+		4.execution(* save*(..))  匹配所有以save开头的方法
 			
