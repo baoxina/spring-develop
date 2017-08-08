@@ -4,6 +4,6 @@ public class Book {
 
 	//cut point
 	public void add(){
-		System.out.println("add.....");
+		System.out.println("Book.add().....");
 	}
 }

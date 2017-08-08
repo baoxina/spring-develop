@@ -9,19 +9,21 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"> 
 	<!-- 1.创建对象 -->
 	<bean id="book" class="com.baoxina.spring.aop_level_one.Book"/>
-	<bean id="bookProxy" class="com.baoxina.spring.aop_level_one.MyBookAdvicer"/>
+	<bean id="bookProxy" class="com.baoxina.spring.aop_level_one.BookProxy"/>
 	<!-- 2.配置aop操作 -->
 	<aop:config>
 		<!-- 2.1 配置切入点 -->
-		<!-- <aop:pointcut expression="execution(* com.baoxina.spring.aop_level_one.Book.add(..))" id="pointcut1"/>id是给切入点起的名字 -->
-		
+		<!-- id是给切入点起的名字 ,expression是aspectj表达式-->
+		<aop:pointcut id="add" expression="execution(* com.baoxina.spring.aop_level_one.Book.add(..))"/><!-- id是给切入点起的名字 -->
 		<!-- 2.2 配置切面 将增调应用的切入点 -->
 		<!-- ref属性表示: 用哪个类做为增强类 -->
 		<aop:aspect ref="bookProxy">
 			<!-- 配置增强类型 -->
 			<!-- method属性表示：增强类中使用哪个方法作为前置增强 -->
 			<!-- pointcut-ref属性表示：将增强方法用在哪个切入点上 -->
-			<aop:before method="before" pointcut="execution(* com.baoxina.spring.aop_level_one.Book.add(..))"/> 
+			<aop:before method="beforeAdd" pointcut-ref="add"/>
+			<aop:after method="afterAdd" pointcut-ref="add"/>
+			<aop:around method="aroundAdd" pointcut-ref="add"/>
 		</aop:aspect>
 	</aop:config>
 </beans>
