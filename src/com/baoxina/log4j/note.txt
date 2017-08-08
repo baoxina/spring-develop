@@ -1,0 +1,14 @@
+Log4j介绍
+1.通过log4j可以看到程序运行过程中更详细的信息,经常使用log4j查看日志
+2.使用
+	(1)导入log4j,commons-logging的jar包
+	(2)复制log4j的配置文件，复制到src下面
+3.设置日志级别
+    log4j.rootLogger=INFO,Console,DEBUGFile,WARNFile,INFOFile,ERRORFile,FETALFile
+	其中 [level] 是日志输出级别，共有5级：
+		FATAL      0  
+		ERROR      3   为严重错误 主要是程序的错误
+		WARN       4   为一般警告，比如session丢失
+		INFO       6   为一般要显示的信息，比如登录登出
+		DEBUG      7  为程序的调试信息
+	
